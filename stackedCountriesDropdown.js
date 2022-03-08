@@ -197,7 +197,7 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
             .attr('transform', function (d, i) {
                 var heightL = legendRectSize + legendSpacing;
                 var offset = heightL * keys.length / 2;
-                var horz = width + margin.left + 30;
+                var horz = width + margin.left + 8;
                 var vert = height - 107 + i * heightL - offset;
                 return 'translate(' + horz + ',' + vert + ')';
             });
@@ -214,7 +214,7 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
 
         legend.append('text')
             .data(keys)
-            .attr('x', legendRectSize + legendSpacing)
+            .attr('x', 4+ legendRectSize + legendSpacing)
             .attr('y', legendRectSize - legendSpacing)
             .text(function (d) { return d; })
             .style('fill', function (d) { return color(d) })
