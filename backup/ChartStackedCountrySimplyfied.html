@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Load d3.js & color scale-->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+
+    </head>
+
+    <body>
+
+        <!-- Initialize a select button -->
+        <div id = "countryDropdown"></div>
+
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+    
+
+        <script>
+
+            //code for stacked chart adapted form: https://www.d3-graph-gallery.com/graph/stackedarea_template.html
+
+           // set the dimensions and margins of the graph
+            var margin = { top: 60, right: 230, bottom: 50, left: 50 },
+                width = 660 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            // format the data
+            //var formatYear = d3.timeFormat("%Y");
+            //var parseYear = d3.timeParse("%Y");
+    
+            // Parse the Data
+            d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
+                console.log(data)
+
+                 // Format the data
+           // data.forEach(function(d) {
+           //     d.year = formatYear(parseYear(+d.year));
+           //  });
+
+
+                // nest the data per country
+                var nest = d3.nest()
+                    .key(function(d){
+                        return d.country;
+                    })
+                    .entries(data)
+
+                    console.log(nest)
+
+
+
+                 // Create a dropdown
+                var countryMenu= d3.select("#countryDropdown")
+
+                countryMenu
+                    .append("select")
+                    .selectAll("option")
+                    .data(nest)
+                    .enter()
+                    .append("option")
+                    .attr("value", function(d){
+                        return d.key;
+                    })
+                    .text(function(d){
+                        return d.key;
+                    })
+
+                console.log(nest[0].key)
+                console.log(nest[0])
+
+                //GENERAL
+
+                // List of commodities = header of the csv files minus some columns
+                var keys = data.columns.slice(2)
+                    console.log(keys)
+                
+
+                // Add X axis
+                var x = d3.scaleLinear()
+                        .domain(d3.extent(data, function (d) { return d.year; }))
+                        .range([0, width]);
+                    var xAxis = svg.append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x).ticks(4))
+
+
+                    // Add X axis label:
+                    svg.append("text")
+                        .attr("text-anchor", "end")
+                        .attr("x", width)
+                        .attr("y", height + 40)
+                        .text("Time (year)");
+
+                    // Add Y axis label:
+                    svg.append("text")
+                        .attr("text-anchor", "end")
+                        .attr("x", 0)
+                        .attr("y", -20)
+                        .text("commodities imported")
+                        .attr("text-anchor", "start")
+
+                    // Add Y axis
+                    var y = d3.scaleLinear()
+                        .domain([0, 5000])
+
+                        .range([height, 0]);
+                    svg.append("g")
+                        .call(d3.axisLeft(y).ticks(5))
+
+
+                //Function to create the initial graph
+
+                var initialGraph = function(country) { 
+
+                    //filter the data by country
+                    var selectCountry = nest.filter(function(d) {
+                        
+                        return d.key == country;
+                        
+                    })
+                     console.log(selectCountry)
+                     console.log(selectCountry[0].values)
+                     
+                     
+
+                    var selectCountryGroups = svg.selectAll(".countryGroups")
+                        .data(selectCountry)
+                        .enter()
+                        .append("g")
+                        .attr("class", "countryGroups")
+
+                    //console.log(selectCountryGroups)
+
+
+                      // color palette
+                     var color = d3.scaleOrdinal()
+                        .domain(keys)
+                        .range(d3.schemeTableau10);
+
+                    
+
+                    //stack the data
+                    var stackedData = d3.stack()
+                        .keys(keys)
+                        (selectCountry[0].values)
+
+                    
+                    console.log(stackedData)
+
+    
+                  
+                    // Create the scatter variable: where both the circles and the brush take place
+                   // var areaChart = selectCountryGroups.append('g') //
+                      //  .attr("clip-path", "url(#clip)")
+
+                    // Area generator
+                    var area = d3.area()
+                        .x(function (d) { return x(d.data.year); })
+                        .y0(function (d) { return y(d[0]); })
+                        .y1(function (d) { return y(d[1]); })
+
+                    // Show the areas
+                    var initialAreaChart =  selectCountryGroups.selectAll('.stacks')
+                        .data(stackedData)
+                        .enter()
+                        .append("path")
+                        .attr("class", function (d) { return "myArea" + d.key })
+                        .style("fill", function (d) { return color(d.key); })
+                        
+                    initialAreaChart
+                        .attr("d", area)
+                        .attr('class', 'stacks')
+                        
+              
+
+                    //////////
+                    // LEGEND //
+                    //////////
+
+                    // Add one rect in the legend for each name.
+                    var size = 20
+                    svg.selectAll("myrect")
+                    .data(keys)
+                    .enter()
+                    .append("rect")
+                        .attr("x", 400)
+                        .attr("y", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+                        .attr("width", size)
+                        .attr("height", size)
+                        .style("fill", function(d){ return color(d)})
+                       
+
+                    // Add one rect in the legend for each name.
+                    svg.selectAll("mylabels")
+                    .data(keys)
+                    .enter()
+                    .append("text")
+                        .attr("x", 400 + size*1.2)
+                        .attr("y", function(d,i){ return 10 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+                        .style("fill", function(d){ return color(d)})
+                        .text(function(d){ return d})
+                        .attr("text-anchor", "left")
+                        .style("alignment-baseline", "middle")
+                       
+                }
+
+                initialGraph('Argentina')
+
+                
+                // Update the data by country
+                var updateGraph = function(country){
+
+                // Filter the data to include only country of interest
+                var selectCountry = nest.filter(function(d){
+                    return d.key == country;
+                    })
+
+                // Select all of the grouped elements and update the data
+                var selectCountryGroups = svg.selectAll(".countryGroups")
+                .data(selectCountry)
+
+                //stack the data
+                var stackedData = d3.stack()
+                        .keys(keys)
+                        (selectCountry[0].values)
+
+                    
+            
+                    // Area generator
+                    var area = d3.area()
+                        .x(function (d) { return x(d.data.year); })
+                        .y0(function (d) { return y(d[0]); })
+                        .y1(function (d) { return y(d[1]); })
+
+                    // Show the areas
+                    selectCountryGroups.selectAll('path.stacks')
+                       // .selectAll(".path")
+                        .data(stackedData)
+                       // .append("path")
+                        //.attr("class", function (d) { return "myArea" + d.key })
+                        //.style("fill", function (d) { return color(d.key); })
+                       // .attr("d", area)
+                        .transition()
+                        .duration(1000)
+                        .attr("d", area)
+                        
+
+                }
+                // Run update function when dropdown selection changes
+                countryMenu.on('change', function(){
+
+                // Find which fruit was selected from the dropdown
+                var selectedCountry = d3.select(this)
+                .select("select")
+                .property("value")
+
+                // Run update function with the selected fruit
+                updateGraph(selectedCountry)
+
+
+                }); 
+
+            })
+             
+
+                
+        </script>
+
+
+    </body>
+
+</html>

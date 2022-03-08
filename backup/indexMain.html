@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UK Food Imports</title>
+    <!-- Load d3.js & color scale-->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    
+
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        #countryDropdown {
+            float: left;
+            margin-top: 50px;
+            margin-left:100px;   
+        }
+
+        #stackedAll {
+            margin-top: 50px;
+            margin-bottom: auto;
+            margin-left:0px;
+            float: left;
+            padding-right: 5px;
+            font-family: "Work Sans", sans-serif;
+
+
+        }
+        .legend {
+                font-size: 12px;
+            }
+            rect {
+                stroke-width: 2;
+            }
+
+    
+
+        #Globe {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: auto;
+            float: right;
+            padding: 0px;
+        }
+
+        .siteheader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            color: #D7D9DB;
+            font-family: "Oswald", sans-serif;
+            background-color: red;
+            }
+
+        .site-title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-family: "Oswald", sans-serif;
+            font-size: 4rem;
+            font-weight: 200;
+            }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="siteheader">
+        <div class="site-title">UK FOOD IMPORTS</div>
+        <div class="site-description">Where is our food comming from?</div>
+      </header>
+
+    <!-- Initialize a select button -->
+    <div id="countryDropdown"></div>
+
+    
+    <div id="stackedAll">
+        <script src="stackedCountriesDropdown.js"></script>
+        
+    </div>
+
+
+    <div id="Globe">
+        <embed type="text/html" src="globeColors.html" width="1000" height="900">
+    </div>
+
+    <div id="legend">
+
+    </div>
+
+
+</body>

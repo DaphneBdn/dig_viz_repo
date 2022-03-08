@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UK Food Imports</title>
+    <!-- Load d3.js & color scale-->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+
+
+    <style>
+        body {
+            background-color: #141516;
+            font-family: "Oswald", sans-serif;
+            color: #D7D9DB;
+        }
+
+        h1,
+        h2 {
+            font-family: "Oswald", sans-serif;
+        }
+
+        #countryDropdown {
+            margin-left: 150px;
+
+
+
+        }
+
+        #stackedAll {
+            margin-top: 20px;
+            
+            margin-left: 100px;
+
+            padding-right: 5px;
+            font-family: "Work Sans", sans-serif;
+
+
+        }
+
+        .legend {
+            font-size: 12px;
+        }
+
+        rect {
+            stroke-width: 2;
+        }
+
+
+
+        #Globe {
+            margin-top: 150px;
+            
+            padding: 0px;
+
+        }
+
+        .siteheader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            color: #D7D9DB;
+            font-family: "Oswald", sans-serif;
+            background-color: #141516;
+        }
+
+        .site-title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-family: "Oswald", sans-serif;
+            font-size: 4rem;
+            font-weight: 200;
+        }
+
+
+
+        .maincontent {
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 60rem;
+        }
+
+        .page-header {
+            margin-bottom: 3rem;
+        }
+
+        .heading {
+            
+            margin-top: 4rem;
+            text-align: center;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .sitefooter {
+            margin-top: 2rem;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            background: black;
+            font-family: "Oswald", sans-serif;
+            color: #D7D9DB;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="siteheader">
+        <div class="site-title">UK FOOD IMPORTS</div>
+        <div class="site-description">Where is our food comming from?</div>
+    </header>
+
+    <main class="maincontent">
+        <div class="page-header"></div>
+
+        <h1 class="heading">???</h1>
+        <p>
+            UK imports text asdkjhfsdh sdkfjhas d kdhjfa s kasdjh kasjhdfaskdfkjshasjhfasdfh
+            skdfjhas aksdhjf akjdfha skd justify-contentasdfjh 
+        </p>
+
+
+        <!-- Initialize a select button -->
+        <div id="countryDropdown"></div>
+
+        <div id="legend"></div>
+
+
+        <div id="stackedAll">
+            <script src="stackedCountriesDropdown.js"></script>
+        </div>
+
+
+        <h2 class="heading">???</h2>
+
+
+
+
+        <div id="Globe">
+            <embed type="text/html" src="globeColors.html" width="1000" height="1000">
+        </div>
+
+
+
+    </main>
+
+    <footer class="sitefooter">
+        <p>
+            Project for CASA003-Digital Visualisation. link to github here
+            Data Source: <a
+                href="https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports">Office
+                for National Statistics</a>
+        </p>
+    </footer>
+
+
+</body>

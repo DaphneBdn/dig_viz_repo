@@ -1,0 +1,142 @@
+[
+    {
+        "commodity": "01 Meat & meat preparations",
+        "year": 2018.0,
+        "imports": 183.5
+    },
+    {
+        "commodity": "02 Dairy products & eggs",
+        "year": 2018.0,
+        "imports": 225.19
+    },
+    {
+        "commodity": "04 Cereals",
+        "year": 2018.0,
+        "imports": 322.08
+    },
+    {
+        "commodity": "05 Vegetables & fruit",
+        "year": 2018.0,
+        "imports": 765.88
+    },
+    {
+        "commodity": "06 Sugar",
+        "year": 2018.0,
+        "imports": 141.82
+    },
+    {
+        "commodity": "07 Coffee, tea, cocoa etc",
+        "year": 2018.0,
+        "imports": 220.85
+    },
+    {
+        "commodity": "09 Miscellaneous foods",
+        "year": 2018.0,
+        "imports": 169.37
+    },
+    {
+        "commodity": "01 Meat & meat preparations",
+        "year": 2019.0,
+        "imports": 194.21
+    },
+    {
+        "commodity": "02 Dairy products & eggs",
+        "year": 2019.0,
+        "imports": 203.49
+    },
+    {
+        "commodity": "04 Cereals",
+        "year": 2019.0,
+        "imports": 306.53
+    },
+    {
+        "commodity": "05 Vegetables & fruit",
+        "year": 2019.0,
+        "imports": 858.02
+    },
+    {
+        "commodity": "06 Sugar",
+        "year": 2019.0,
+        "imports": 134.15
+    },
+    {
+        "commodity": "07 Coffee, tea, cocoa etc",
+        "year": 2019.0,
+        "imports": 266.11
+    },
+    {
+        "commodity": "09 Miscellaneous foods",
+        "year": 2019.0,
+        "imports": 169.08
+    },
+    {
+        "commodity": "01 Meat & meat preparations",
+        "year": 2020.0,
+        "imports": 154.88
+    },
+    {
+        "commodity": "02 Dairy products & eggs",
+        "year": 2020.0,
+        "imports": 195.13
+    },
+    {
+        "commodity": "04 Cereals",
+        "year": 2020.0,
+        "imports": 318.24
+    },
+    {
+        "commodity": "05 Vegetables & fruit",
+        "year": 2020.0,
+        "imports": 802.57
+    },
+    {
+        "commodity": "06 Sugar",
+        "year": 2020.0,
+        "imports": 111.93
+    },
+    {
+        "commodity": "07 Coffee, tea, cocoa etc",
+        "year": 2020.0,
+        "imports": 293.2
+    },
+    {
+        "commodity": "09 Miscellaneous foods",
+        "year": 2020.0,
+        "imports": 178.37
+    },
+    {
+        "commodity": "01 Meat & meat preparations",
+        "year": 2021.0,
+        "imports": 247.84
+    },
+    {
+        "commodity": "02 Dairy products & eggs",
+        "year": 2021.0,
+        "imports": 269.56
+    },
+    {
+        "commodity": "04 Cereals",
+        "year": 2021.0,
+        "imports": 395.75
+    },
+    {
+        "commodity": "05 Vegetables & fruit",
+        "year": 2021.0,
+        "imports": 693.27
+    },
+    {
+        "commodity": "06 Sugar",
+        "year": 2021.0,
+        "imports": 161.39
+    },
+    {
+        "commodity": "07 Coffee, tea, cocoa etc",
+        "year": 2021.0,
+        "imports": 296.23
+    },
+    {
+        "commodity": "09 Miscellaneous foods",
+        "year": 2021.0,
+        "imports": 161.66
+    }
+]
