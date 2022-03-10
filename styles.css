@@ -1,0 +1,100 @@
+body {
+    background-color:  #141516;
+    font-family: "Oswald", sans-serif;
+    color: #D7D9DB;
+}
+
+h1,
+h2 {
+    font-family: "Oswald", sans-serif;
+}
+
+#countryDropdown {
+    margin-left: 150px;
+}
+
+#stackedAll {
+    margin-top: 20px;
+    margin-left: 100px;
+    padding-right: 5px;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+}
+
+.legend {
+    font-size: 14px;
+}
+
+rect {
+    stroke-width: 2;
+}
+
+#Globe {
+    padding: 0px;
+}
+
+.siteheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: #D7D9DB;
+    font-family: "Oswald", sans-serif;
+    font-weight: 550;
+    background-color: #141516;
+}
+
+.site-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+
+.maincontent {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 60rem;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.heading {
+    
+    margin-top: 4rem;
+    text-align: left;
+    margin-left: 145px;
+    margin-bottom: 2rem;
+    padding-right: 5px;
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    
+    color: #D7D9DB;
+   
+}
+
+.sitefooter {
+    margin-top: 3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: black;
+    font-family: "Oswald", sans-serif;
+    color: #D7D9DB;
+}
+
+a:link {
+    color: #D7D9DB;
+    background-color: transparent;
+    text-decoration: line;
+    }
+
+a:visited {
+    color: #D7D9DB;
+    background-color: transparent;
+    text-decoration: line;
+        }

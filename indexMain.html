@@ -3,113 +3,21 @@
 
 <head>
     <title>UK Food Imports</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="styles.css"
+    type="text/css"
+    media="all"
+  />
     <!-- Load d3.js & color scale-->
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-
-
-    <style>
-        body {
-            background-color:  #141516;
-            font-family: "Oswald", sans-serif;
-            color: #D7D9DB;
-        }
-
-        h1,
-        h2 {
-            font-family: "Oswald", sans-serif;
-        }
-
-        #countryDropdown {
-            margin-left: 150px;
-
-        }
-
-        #stackedAll {
-            margin-top: 20px;
-            margin-left: 100px;
-            padding-right: 5px;
-            font-family: "Work Sans", sans-serif;
-            font-size: 12px;
-        }
-
-        .legend {
-            font-size: 12px;
-        }
-
-        rect {
-            stroke-width: 2;
-        }
-
-
-
-        #Globe {
-            
-            padding: 0px;
-        }
-
-        .siteheader {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-            color: #D7D9DB;
-            font-family: "Oswald", sans-serif;
-            background-color: #141516;
-        }
-
-        .site-title {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            font-family: "Oswald", sans-serif;
-            font-size: 3rem;
-            font-weight: 200;
-        }
-
-
-        .maincontent {
-            margin: 0 auto;
-            padding: 0 1rem;
-            max-width: 60rem;
-        }
-
-        .page-header {
-            margin-bottom: 2rem;
-        }
-
-        .heading {
-            
-            margin-top: 4rem;
-            text-align: left;
-           
-
-            margin-top: 20px;
-            margin-left: 145px;
-            margin-bottom: 2rem;
-            padding-right: 5px;
-            font-family: "Work Sans", sans-serif;
-            font-size: 16px;
-           
-        }
-
-        .sitefooter {
-            margin-top: 3rem;
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            background: black;
-            font-family: "Oswald", sans-serif;
-            color: #D7D9DB;
-        }
-
-        a:link {
-            color: #D7D9DB;
-            background-color: transparent;
-            text-decoration: none;
-            }
-    </style>
-
+ 
 
 </head>
 
@@ -123,7 +31,6 @@
     <main class="maincontent">
         <div class="page-header"></div>
 
-    
 
         <div id="Globe">
             <embed type="text/html" src="globeColors.html" width="1000" height="1000">
@@ -149,7 +56,7 @@
     <footer class="sitefooter">
         <p>
             <table>
-                <tr><td>Project for CASA003-Digital Visualisation <a href="https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports" target="_blank" >(github)</a></td></tr>
+                <tr><td>Project for CASA003-Digital Visualisation <a href="https://github.com/DaphneBdn/dig_viz_repo" target="_blank" >(GitHub)</a></td></tr>
                 <tr><td>Data Source: <a href="https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports" target="_blank" >Office for National Statistics</a></td></tr>
             </table>
             

@@ -73,7 +73,6 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
 
 
 
-
     // Add X axis
     var x = d3.scaleLinear()
         .domain(d3.extent(data, function (d) { return d.year; }))
@@ -89,30 +88,30 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
         .attr("x", width)
         .attr("y", height + 40)
         .text("Time (year)")
-        .style("fill", "white");
+        .style("fill", "#D7D9DB");
 
     // Add Y axis label:
     svg.append("text")
         .attr("text-anchor", "end")
         .attr("x", -136)
         .attr("y", -40)
-        .text("commodities(£'s million)")
+        .text("Commodities (£'s million)")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .style("fill", "white");
+        .style("fill", "#D7D9DB");
 
     // Add Y axis
-    var y = d3.scaleLinear()
+    const y = d3.scaleLinear()
         .domain([0, 5000])
-
         .range([height, 0]);
     var yAxis = svg.append("g")
         .call(d3.axisLeft(y).ticks(5))
 
 
+
     //color of axis
 
-    var axCol = "white"
+    var axCol = "#D7D9DB"
 
     xAxis.selectAll("line")
         .style("stroke", axCol);
@@ -167,7 +166,6 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
             //.range(d3.schemeSet3)
 
 
-
         //stack the data
         var stackedData = d3.stack()
             .keys(keys)
@@ -196,8 +194,7 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
             .attr('class', 'stacks')
 
 
-     
-
+       
 
         // LEGEND 
 
@@ -239,6 +236,7 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
         //.on("mouseleave", noHighlight);
     }
 
+    //create the initial graph for Ireland
     initialGraph('Ireland')
 
 
@@ -268,12 +266,7 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
 
         // Show the areas
         selectCountryGroups.selectAll('path.stacks')
-            // .selectAll(".path")
             .data(stackedData)
-            // .append("path")
-            //.attr("class", function (d) { return "myArea" + d.key })
-            //.style("fill", function (d) { return color(d.key); })
-            // .attr("d", area)
             .transition()
             .duration(1000)
             .attr("d", area)
@@ -283,12 +276,12 @@ d3.csv("Data/commodities_wide_20.csv", function (data) {
     // Run update function when dropdown selection changes
     countryMenu.on('change', function () {
 
-        // Find which fruit was selected from the dropdown
+        // Find which country was selected from the dropdown
         var selectedCountry = d3.select(this)
             .select("select")
             .property("value")
 
-        // Run update function with the selected fruit
+        // Run update function with the selected country
         updateGraph(selectedCountry)
 
     });
