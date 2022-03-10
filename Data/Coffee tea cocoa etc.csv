@@ -1,13 +1,16 @@
 ,commodity,country,imports,country_code,latitude,longitude,code country
-80,"07 Coffee, tea, cocoa etc",Belgium,1076.3899999999999,BE,50.503887,4.469936,BE Belgium
-81,"07 Coffee, tea, cocoa etc",Brazil,437.28000000000003,BR,-14.235004,-51.92528,BR Brazil
-82,"07 Coffee, tea, cocoa etc",France,1602.58,FR,46.227638,2.213749,FR France
-83,"07 Coffee, tea, cocoa etc",Germany,2367.36,DE,51.165691,10.451526,DE Germany
-84,"07 Coffee, tea, cocoa etc",India,404.67,IN,20.593684,78.96288,IN India
-85,"07 Coffee, tea, cocoa etc",Ireland,866.5099999999999,IE,53.41291,-8.24389,IE Ireland
-86,"07 Coffee, tea, cocoa etc",Italy,723.16,IT,41.87194,12.56738,IT Italy
-87,"07 Coffee, tea, cocoa etc",Kenya,533.5,KE,-0.023559,37.906193,KE Kenya
-88,"07 Coffee, tea, cocoa etc",Netherlands,1333.3799999999999,NL,52.132633,5.291266,NL Netherlands
-89,"07 Coffee, tea, cocoa etc",Poland,1095.66,PL,51.919438,19.145136,PL Poland
-90,"07 Coffee, tea, cocoa etc",Spain,578.95,ES,40.463667,-3.74922,ES Spain
-91,"07 Coffee, tea, cocoa etc",Vietnam,291.54999999999995,VN,14.058324,108.277199,VN Vietnam
+108,"07 Coffee, tea, cocoa etc",Belgium,1076.3899999999999,BE,50.503887,4.469936,BE Belgium
+109,"07 Coffee, tea, cocoa etc",Brazil,437.28000000000003,BR,-14.235004,-51.92528,BR Brazil
+110,"07 Coffee, tea, cocoa etc",China,216.01,CN,35.86166,104.195397,CN China
+111,"07 Coffee, tea, cocoa etc",Colombia,209.24,CO,4.570868,-74.297333,CO Colombia
+112,"07 Coffee, tea, cocoa etc",France,1602.58,FR,46.227638,2.213749,FR France
+113,"07 Coffee, tea, cocoa etc",Germany,2367.36,DE,51.165691,10.451526,DE Germany
+114,"07 Coffee, tea, cocoa etc",India,404.67,IN,20.593684,78.96288,IN India
+115,"07 Coffee, tea, cocoa etc",Ireland,866.5099999999999,IE,53.41291,-8.24389,IE Ireland
+116,"07 Coffee, tea, cocoa etc",Italy,723.16,IT,41.87194,12.56738,IT Italy
+117,"07 Coffee, tea, cocoa etc",Kenya,533.5,KE,-0.023559,37.906193,KE Kenya
+118,"07 Coffee, tea, cocoa etc",Netherlands,1333.3799999999999,NL,52.132633,5.291266,NL Netherlands
+119,"07 Coffee, tea, cocoa etc",Poland,1095.66,PL,51.919438,19.145136,PL Poland
+120,"07 Coffee, tea, cocoa etc",Spain,578.95,ES,40.463667,-3.74922,ES Spain
+121,"07 Coffee, tea, cocoa etc",United States,230.5,US,37.09024,-95.712891,US United States
+122,"07 Coffee, tea, cocoa etc",Vietnam,291.54999999999995,VN,14.058324,108.277199,VN Vietnam

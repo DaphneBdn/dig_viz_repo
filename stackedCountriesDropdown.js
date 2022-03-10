@@ -1,5 +1,6 @@
-//code for stacked chart adapted form: https://www.d3-graph-gallery.com/graph/stackedarea_template.html
-// code for country dropdown menu adapted from: https://bl.ocks.org/ProQuestionAsker/8382f70af7f4a7355827c6dc4ee8817d
+//STACKED AREA CHART
+//code for stacked chart adapted from: https://www.d3-graph-gallery.com/graph/stackedarea_template.html
+//code for country dropdown menu adapted from: https://bl.ocks.org/ProQuestionAsker/8382f70af7f4a7355827c6dc4ee8817d
 
 // set the dimensions and margins of the graph
 var margin = { top: 60, right: 230, bottom: 50, left: 50 },
@@ -15,19 +16,14 @@ var svg = d3.select("#stackedAll")
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
-// format the data
+// format the data (not needed here)
 //var formatYear = d3.timeFormat("%Y");
 //var parseYear = d3.timeParse("%Y");
 
 // Parse the Data
-d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
+d3.csv("Data/commodities_wide_20.csv", function (data) {
+
     console.log(data)
-
-    // Format the data
-    // data.forEach(function(d) {
-    //     d.year = formatYear(parseYear(+d.year));
-    //  });
-
 
     // nest the data per country
     var nest = d3.nest()
@@ -38,7 +34,7 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
 
     console.log(nest)
 
-    // Create the dropdown menu
+    // Create the dropdown menu (button)
     var countryMenu = d3.select("#countryDropdown")
 
     countryMenu
@@ -63,6 +59,20 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
     var keys = data.columns.slice(2)
     console.log(keys)
 
+    /*
+         //title
+         svg.append("text")
+         .attr("x", (width / 2))             
+         .attr("y", margin.top / 2)
+         .attr("text-anchor", "middle")  
+         .style("font-size", "16px") 
+         //.style("text-decoration", "underline")
+         .style("fill", "white")  
+         .text("UK food imports: top 20 countries");
+*/
+
+
+
 
     // Add X axis
     var x = d3.scaleLinear()
@@ -84,10 +94,11 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
     // Add Y axis label:
     svg.append("text")
         .attr("text-anchor", "end")
-        .attr("x", 0)
-        .attr("y", -20)
-        .text("commodities imported")
+        .attr("x", -136)
+        .attr("y", -40)
+        .text("commodities(£'s million)")
         .attr("text-anchor", "start")
+        .attr("transform", "rotate(-90)")
         .style("fill", "white");
 
     // Add Y axis
@@ -110,7 +121,7 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
         .style("stroke", axCol);
 
     xAxis.selectAll("text")
-        .style("stroke", axCol);
+        .style("fill", axCol);
 
 
     yAxis.selectAll("line")
@@ -120,8 +131,10 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
         .style("stroke", axCol);
 
     yAxis.selectAll("text")
-        .style("stroke", axCol);
+        .style("fill", axCol);
 
+
+  
 
     //Function to create the initial graph
 
@@ -183,6 +196,9 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
             .attr('class', 'stacks')
 
 
+     
+
+
         // LEGEND 
 
         // Add one rect in the legend for each name.
@@ -223,7 +239,7 @@ d3.csv("Data/commodities_wide_all_countries.csv", function (data) {
         //.on("mouseleave", noHighlight);
     }
 
-    initialGraph('Argentina')
+    initialGraph('Ireland')
 
 
     // Update the data by country

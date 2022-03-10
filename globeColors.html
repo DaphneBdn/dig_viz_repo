@@ -58,8 +58,6 @@
 
         <a-entity id="globeID" scale="0.1 0.1 0.1" class="collidable" globe="
             globe-image-url: https://unpkg.com/three-globe@2.23.4/example/img/earth-dark.jpg;
-            bump-image-url:
-            https://upload.wikimedia.org/wikipedia/commons/f/fb/Solarsystemscope_texture_8k_earth_normal_map.tif;
             show-atmosphere: true;
             atmosphere-color: white;
             atmosphere-altitude: 0.10">
@@ -135,7 +133,31 @@
 
         function getTradeData() {
 
+            d3.json("resources/ne_110m_admin_0_countries.geojson").then(function(data) {
+
+                globeEntity.setAttribute("globe", "polygonsData", data.features);
+
+
+            
+
+                setTimeout( () => globeEntity.setAttribute("globe", {
+                    polygonsTransitionDuration: 0, 
+                    polygonAltitude: .002
+                }),0); 
+
+                globeEntity.setAttribute("globe", {
+                 
+                    polygonCapColor: () => 'black',
+                    polygonSideColor: () => 'black',
+                    polygonStrokeColor: () => '#2d2e30',
+                    
+                })
+            
+                }); 
+
             d3.csv("Data/Live animals.csv").then(function(data) {
+
+                /*
        
                 globeEntity.setAttribute('globe', {
                 labelsData: data,
@@ -148,7 +170,7 @@
                 labelResolution: 1,
                 labelIncludeDot: true,
                 });
-
+                */
 
                 globeEntity0.setAttribute('globe', {
                 //data.features represent the Array of the parsed GeoJson
@@ -376,7 +398,7 @@
                 });
 
 
-                d3.csv("Data/countriestotal.csv").then(function(data) {
+                d3.csv("Data/countries50.csv").then(function(data) {
        
                     globeEntity.setAttribute('globe', {
                     labelsData: data,
@@ -385,6 +407,7 @@
                     labelText: d => d.country,
                     labelDotOrientation: () => 'bottom',
                     labelColor: () => 'rgba(255,255,255,1)',
+                    labelAltitude: 0.03,
                     labelSize: 0.6,
                     labelResolution: 1,
                     labelIncludeDot: true,

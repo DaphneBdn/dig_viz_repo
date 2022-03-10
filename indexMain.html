@@ -11,7 +11,7 @@
 
     <style>
         body {
-            background-color: #141516;
+            background-color:  #141516;
             font-family: "Oswald", sans-serif;
             color: #D7D9DB;
         }
@@ -24,19 +24,14 @@
         #countryDropdown {
             margin-left: 150px;
 
-
-
         }
 
         #stackedAll {
             margin-top: 20px;
-            
             margin-left: 100px;
-
             padding-right: 5px;
             font-family: "Work Sans", sans-serif;
-
-
+            font-size: 12px;
         }
 
         .legend {
@@ -50,10 +45,8 @@
 
 
         #Globe {
-            margin-top: 150px;
             
             padding: 0px;
-
         }
 
         .siteheader {
@@ -67,13 +60,12 @@
         }
 
         .site-title {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             font-family: "Oswald", sans-serif;
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 200;
         }
-
 
 
         .maincontent {
@@ -83,25 +75,39 @@
         }
 
         .page-header {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .heading {
             
             margin-top: 4rem;
-            text-align: center;
-            font-family: "Oswald", sans-serif;
+            text-align: left;
+           
+
+            margin-top: 20px;
+            margin-left: 145px;
+            margin-bottom: 2rem;
+            padding-right: 5px;
+            font-family: "Work Sans", sans-serif;
+            font-size: 16px;
+           
         }
 
         .sitefooter {
-            margin-top: 2rem;
-            padding: 2rem;
+            margin-top: 3rem;
+            padding: 1rem;
             display: flex;
             justify-content: center;
             background: black;
             font-family: "Oswald", sans-serif;
             color: #D7D9DB;
         }
+
+        a:link {
+            color: #D7D9DB;
+            background-color: transparent;
+            text-decoration: none;
+            }
     </style>
 
 
@@ -110,51 +116,46 @@
 <body>
 
     <header class="siteheader">
-        <div class="site-title">UK FOOD IMPORTS</div>
-        <div class="site-description">Where is our food comming from?</div>
+        <div class="site-title">Where does our food come from?</div>
+        <div class="site-description"> Food imports of the United Kingdom </div>
     </header>
 
     <main class="maincontent">
         <div class="page-header"></div>
 
-        <h1 class="heading">???</h1>
-        <p>
-            UK imports text asdkjhfsdh sdkfjhas d kdhjfa s kasdjh kasjhdfaskdfkjshasjhfasdfh
-            skdfjhas aksdhjf akjdfha skd justify-contentasdfjh 
-        </p>
-
-
-        <!-- Initialize a select button -->
-        <div id="countryDropdown"></div>
-
-        <div id="legend"></div>
-
-
-        <div id="stackedAll">
-            <script src="stackedCountriesDropdown.js"></script>
-        </div>
-
-
-        <h2 class="heading">???</h2>
-
-
-
+    
 
         <div id="Globe">
             <embed type="text/html" src="globeColors.html" width="1000" height="1000">
         </div>
 
 
+        <h2 class="heading">UK food imports: top 20 countries</h2>
+
+        <!-- Initialize a select button -->
+        <div id="countryDropdown"></div>
+
+        <div id="legend"></div>
+
+        <div id="stackedAll">
+            <script src="stackedCountriesDropdown.js"></script>
+        </div>
+
+
+        
 
     </main>
 
     <footer class="sitefooter">
         <p>
-            Project for CASA003-Digital Visualisation. link to github here
-            Data Source: <a
-                href="https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports">Office
-                for National Statistics</a>
+            <table>
+                <tr><td>Project for CASA003-Digital Visualisation <a href="https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports" target="_blank" >(github)</a></td></tr>
+                <tr><td>Data Source: <a href="https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/datasets/uktradecountrybycommodityimports" target="_blank" >Office for National Statistics</a></td></tr>
+            </table>
+            
         </p>
+       
+
     </footer>
 
 

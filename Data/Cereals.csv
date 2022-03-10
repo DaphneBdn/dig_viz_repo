@@ -1,13 +1,17 @@
 ,commodity,country,imports,country_code,latitude,longitude,code country
-37,04 Cereals,Belgium,1342.6,BE,50.503887,4.469936,BE Belgium
-38,04 Cereals,Canada,785.72,CA,56.130366,-106.346771,CA Canada
-39,04 Cereals,France,2303.1,FR,46.227638,2.213749,FR France
-40,04 Cereals,Germany,2126.85,DE,51.165691,10.451526,DE Germany
-41,04 Cereals,India,489.28999999999996,IN,20.593684,78.96288,IN India
-42,04 Cereals,Ireland,1601.04,IE,53.41291,-8.24389,IE Ireland
-43,04 Cereals,Italy,1408.9299999999998,IT,41.87194,12.56738,IT Italy
-44,04 Cereals,Netherlands,1150.51,NL,52.132633,5.291266,NL Netherlands
-45,04 Cereals,Pakistan,335.34000000000003,PK,30.375321,69.345116,PK Pakistan
-46,04 Cereals,Poland,967.59,PL,51.919438,19.145136,PL Poland
-47,04 Cereals,Spain,763.0,ES,40.463667,-3.74922,ES Spain
-48,04 Cereals,Ukraine,539.3399999999999,UA,48.379433,31.16558,UA Ukraine
+51,04 Cereals,Argentina,183.42,AR,-38.416097,-63.616672,AR Argentina
+52,04 Cereals,Belgium,1342.6,BE,50.503887,4.469936,BE Belgium
+53,04 Cereals,Canada,785.72,CA,56.130366,-106.346771,CA Canada
+54,04 Cereals,France,2303.1,FR,46.227638,2.213749,FR France
+55,04 Cereals,Germany,2126.85,DE,51.165691,10.451526,DE Germany
+56,04 Cereals,India,489.28999999999996,IN,20.593684,78.96288,IN India
+57,04 Cereals,Ireland,1601.04,IE,53.41291,-8.24389,IE Ireland
+58,04 Cereals,Italy,1408.9299999999998,IT,41.87194,12.56738,IT Italy
+59,04 Cereals,Netherlands,1150.51,NL,52.132633,5.291266,NL Netherlands
+60,04 Cereals,Pakistan,335.34000000000003,PK,30.375321,69.345116,PK Pakistan
+61,04 Cereals,Poland,967.59,PL,51.919438,19.145136,PL Poland
+62,04 Cereals,Spain,763.0,ES,40.463667,-3.74922,ES Spain
+63,04 Cereals,Thailand,204.81,TH,15.870032,100.992541,TH Thailand
+64,04 Cereals,Turkey,166.02,TR,38.963745,35.243322,TR Turkey
+65,04 Cereals,Ukraine,539.3399999999999,UA,48.379433,31.16558,UA Ukraine
+66,04 Cereals,United States,264.68,US,37.09024,-95.712891,US United States

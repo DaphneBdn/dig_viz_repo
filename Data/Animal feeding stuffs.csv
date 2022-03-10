@@ -1,8 +1,14 @@
 ,commodity,country,imports,country_code,latitude,longitude,code country
-92,08 Animal feeding stuffs,Argentina,1766.88,AR,-38.416097,-63.616672,AR Argentina
-93,08 Animal feeding stuffs,China,353.49,CN,35.86166,104.195397,CN China
-94,08 Animal feeding stuffs,France,769.02,FR,46.227638,2.213749,FR France
-95,08 Animal feeding stuffs,Germany,773.0699999999999,DE,51.165691,10.451526,DE Germany
-96,08 Animal feeding stuffs,Ireland,1268.58,IE,53.41291,-8.24389,IE Ireland
-97,08 Animal feeding stuffs,Netherlands,1364.51,NL,52.132633,5.291266,NL Netherlands
-98,08 Animal feeding stuffs,United States,480.8,US,37.09024,-95.712891,US United States
+123,08 Animal feeding stuffs,Argentina,1766.88,AR,-38.416097,-63.616672,AR Argentina
+124,08 Animal feeding stuffs,Belgium,332.65999999999997,BE,50.503887,4.469936,BE Belgium
+125,08 Animal feeding stuffs,China,353.49,CN,35.86166,104.195397,CN China
+126,08 Animal feeding stuffs,France,769.02,FR,46.227638,2.213749,FR France
+127,08 Animal feeding stuffs,Germany,773.0699999999999,DE,51.165691,10.451526,DE Germany
+128,08 Animal feeding stuffs,Hungary,132.89,HU,47.162494,19.503304,HU Hungary
+129,08 Animal feeding stuffs,Ireland,1268.58,IE,53.41291,-8.24389,IE Ireland
+130,08 Animal feeding stuffs,Lithuania,151.87,LT,55.169438,23.881275,LT Lithuania
+131,08 Animal feeding stuffs,Netherlands,1364.51,NL,52.132633,5.291266,NL Netherlands
+132,08 Animal feeding stuffs,Norway,256.16999999999996,NO,60.472024,8.468946,NO Norway
+133,08 Animal feeding stuffs,Poland,219.72,PL,51.919438,19.145136,PL Poland
+134,08 Animal feeding stuffs,Spain,138.55,ES,40.463667,-3.74922,ES Spain
+135,08 Animal feeding stuffs,United States,480.8,US,37.09024,-95.712891,US United States
